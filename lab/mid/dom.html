@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>CONTACT ME HERE</h1>
+    <form id="myForm" method="post">
+        <fieldset>
+            <legend> Information Form</legend>
+
+            <table>
+                <tr>
+                    <td><label for="Firstname">First Name:</label></td>
+                    <td><input type="text" id="Firstname" name="Firstname" placeholder="Enter First Name"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="lastname">Last Name:</label></td>
+                    <td><input type="text" id="lastname" name="lastname" placeholder="Enter Last Name"></td>
+                </tr>
+                <tr>
+                    <td><label>Gender: </label></td>
+                    <td>
+                        <input type="radio" name="gender" value="male">Male
+                        <input type="radio" name="gender" value="female">Female
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" placeholder="e.g. John@gmail.com"></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <table>
+                <legend>Services:</legend>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="Web Development">Web Development
+                        <input type="checkbox" value="AI/ML">AI/ML
+                        <input type="checkbox" value="Backend">Backend
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <fieldset>
+            <legend>Resean of Contact:</legend>
+            <table>
+                <tr>
+                    <td>
+                        <lebel for="Reason of contact">Reason: </lebel>
+                    </td>
+                    <td>
+                        <select id="Reason" name="Reason">
+                            <option value="">CLICK HERE FOR OPTIONS</option>
+                            <option>Job</option>
+                            <option>Projects</option>
+                            <option>Thesis</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>Book Slot:</legend>
+            <table>
+                <tr>
+                    <td>
+                        <input type="date" id="date" name="date">
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+
+        <br>
+
+        <table>
+            <tr>
+                <td>
+
+                    <button type="submit">Submit</button>
+                </td>
+
+            </tr>
+        </table>
+
+
+
+
+
+</body>
+
+
+<script>
+    document.getElementById("myForm").addEventListener("submit", function (event) {
+        var firstname = document.getElementById("Firstname").value;
+        var lastname = document.getElementById("lastname").value;
+        var email = document.getElementById("email").value;
+
+        if (firstname == "" || lastname == "" || email == "") {
+            alert("Please fill out all required fields.");
+            event.preventDefault();
+        }
+    });
+</script>
+
+
+</html>
